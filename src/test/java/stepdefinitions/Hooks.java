@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import managers.FileReaderManager;
+import utilities.DontKnow;
 import utilities.TestContext;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -14,9 +15,10 @@ public class Hooks {
 
     TestContext testContext;
     WebDriver webDriver;
-
-    public Hooks(TestContext context) {
+    DontKnow dontKnow;
+    public Hooks(TestContext context,DontKnow dontKnow) {
         testContext = context;
+        this.dontKnow=dontKnow;
     }
 
     @Before
