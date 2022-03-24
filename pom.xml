@@ -79,7 +79,7 @@
                 <executions>
                     <execution>
                         <id>execution</id>
-                        <phase>verify</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
@@ -89,7 +89,7 @@
                             <jsonFiles>
                                 <param>**/*.json</param>
                             </jsonFiles>
-                            <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
+                            <outputDirectory>target/cucumber-reports</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
