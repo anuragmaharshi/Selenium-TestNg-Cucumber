@@ -4,6 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 
 //https://github.com/yazidisme/selenium-cucumber-framework
@@ -33,5 +34,12 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     @AfterSuite
     public void afterSuite() {
         System.out.println("================ AFTER SUITE ================");
+    }
+
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("Before any test");
+
+        //https://www.linkedin.com/pulse/getting-started-aws-device-farm-selenium-webdriver-moataz-nabil/
     }
 }

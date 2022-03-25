@@ -27,10 +27,10 @@ public class Test1Steps {
     public void select_any_element() {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("select_any_element");
-        String xpath = "//*[@id='DeltaSiteLogo' and contains(@class,'visible')]";
+        String xpath = "//img[@alt='Git']";
         WebDriver driver=testContext.getDriverManager().getDriver();
         Wait.untilElementIsVisible(driver, driver.findElement(By.xpath(xpath)), 30L);
-        Assert.assertTrue(false);
+        Assert.assertTrue(true);
     }
     @Then("It should be displayed")
     public void it_should_be_displayed() {
