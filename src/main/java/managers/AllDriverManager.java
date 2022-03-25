@@ -28,11 +28,12 @@ public class AllDriverManager {
     private WebDriver createLocalDriver() {
         switch (driverType) {
             case CHROME:
-                //WebDriverManager.chromedriver().setup();
-                System.setProperty("webdriver.chrome.driver", "C:/ProgramData/chromedriver/chromedriver.exe");
-                System.setProperty("webdriver.chrome.silentOutput","true");
+                WebDriverManager.chromedriver().setup();
+                //System.setProperty("webdriver.chrome.driver", "C:/ProgramData/chromedriver/chromedriver.exe");
+                //System.setProperty("webdriver.chrome.silentOutput","true");
                 ChromeOptions chromeOptions = new ChromeOptions();
-               // chromeOptions.addArguments("--headless", "--window-size=1644,868");
+                //chromeOptions.addArguments("--headless", "--window-size=1644,868");
+                chromeOptions.addArguments("--headless");
                 chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
                 webDriver = new ChromeDriver(chromeOptions);
                 break;
